@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/imagesFragment">
+
+    <fragment
+        android:id="@+id/imagesFragment"
+        android:name="com.napoleonit.lecture.ImageLoaderFragment"
+        android:label="ImagesFragment" >
+        <action
+            android:id="@+id/action_imagesFragment_to_fullImageFragment"
+            app:destination="@id/fullImageFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/fullImageFragment"
+        android:name="com.napoleonit.lecture.FullImageFragment"
+        android:label="FullImageFragment" >
+        <argument
+            android:name="url"
+            app:argType="string" />
+    </dialog>
+</navigation>
