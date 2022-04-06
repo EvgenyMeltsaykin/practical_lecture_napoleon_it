@@ -24,6 +24,7 @@ class ImageLoaderFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.btnLoad.setOnClickListener {
             val url = binding.etUrl.text.toString()
+            binding.tvLastUrl.text = url
             Glide.with(this)
                 .load(url)
                 .placeholder(R.drawable.ic_image_placeholder)
