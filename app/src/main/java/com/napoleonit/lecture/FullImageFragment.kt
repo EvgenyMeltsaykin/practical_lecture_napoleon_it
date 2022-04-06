@@ -48,9 +48,9 @@ class FullImageFragment : BottomSheetDialogFragment() {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val dialog: Dialog = super.onCreateDialog(savedInstanceState)
-        dialog.setOnShowListener { bsDialog ->
-            val d = bsDialog as BottomSheetDialog
-            val bottomSheet = d.findViewById<FrameLayout>(com.google.android.material.R.id.design_bottom_sheet)
+        dialog.setOnShowListener { dialogInterface ->
+            val bsDialog = dialogInterface as BottomSheetDialog
+            val bottomSheet = bsDialog.findViewById<FrameLayout>(com.google.android.material.R.id.design_bottom_sheet)
 
             bottomSheet?.let {
                 val layoutParams = bottomSheet.layoutParams
